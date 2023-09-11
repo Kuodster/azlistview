@@ -144,7 +144,7 @@ class _AzListViewState extends State<AzListView> {
 
   void _scrollTopIndex(String tag) {
     int index = _getIndex(tag);
-    if (index != -1) {
+    if (index != -1 && itemScrollController.isAttached) {
       itemScrollController.jumpTo(index: index);
     }
   }
